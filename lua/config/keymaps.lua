@@ -28,7 +28,6 @@ map("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 -- Insert --
 -- Press jk fast to enter
 map("i", "jk", "<ESC>", opts)
-map("n", "<leader>w", ":w<CR>", opts)
 
 -- map("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
 -- map("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
@@ -81,7 +80,7 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsea
 -- map("n", "<leader>fp", ":Telescope projects<CR>", opts)
 -- map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 -- map("n", "<leader>fr", ":Telescope lsp_references<CR>", opts)
--- map("n", "<leader>fj", ":Telescope jumplist<CR>", opts)
+map("n", "<leader>fj", ":Telescope jumplist<CR>", opts)
 -- map("n", "<leader>fm", ":Telescope <CR>", opts)
 -- map("n", "<leader><leader>", ":Telescope keymaps<CR>", opts)
 -- map("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
@@ -112,6 +111,7 @@ map("i", ";", ";<c-g>u")
 
 -- save file
 map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+map("n", "<leader>w", "<cmd>w<cr><esc>", { silent = true, desc = "Save file" })
 
 -- better indenting
 map("v", "<", "<gv")
