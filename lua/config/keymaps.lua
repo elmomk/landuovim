@@ -30,10 +30,10 @@ map("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 map("i", "jk", "<ESC>", opts)
 map("n", "<leader>w", ":w<CR>", opts)
 
-map("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
-map("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
-map("n", "<leader>se", "<C-w>=", opts) -- split window equal width
-map("n", "<leader>sx", ":close<CR>", opts) -- split window equal width
+-- map("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
+-- map("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
+-- map("n", "<leader>se", "<C-w>=", opts) -- split window equal width
+-- map("n", "<leader>sx", ":close<CR>", opts) -- split window equal width
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
@@ -141,7 +141,7 @@ map("n", "<leader>uc", function() Util.toggle("conceallevel", false, {0, conceal
 map("n", "<leader>gg", function() Util.float_term({ "lazygit" }, { cwd = Util.get_root() }) end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function() Util.float_term({ "lazygit" }) end, { desc = "Lazygit (cwd)" })
 -- trouble
-map("n", "<leader>t", ":TroubleToggle<CR>", opts) -- go to previous tab
+-- map("n", "<leader>t", ":TroubleToggle<CR>", opts) -- go to previous tab
 
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
@@ -157,12 +157,12 @@ map("n", "<leader>fT", function() Util.float_term() end, { desc = "Terminal (cwd
 map("t", "<esc><esc>", "<c-\\><c-n>", {desc = "Enter Normal Mode"})
 
 ---- windows
---map("n", "<leader>ww", "<C-W>p", { desc = "Other window" })
---map("n", "<leader>wd", "<C-W>c", { desc = "Delete window" })
---map("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
---map("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
---map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
---map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
+map("n", "<leader>ww", "<C-W>p", { desc = "Other window" })
+map("n", "<leader>wd", "<C-W>c", { desc = "Delete window" })
+map("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
+map("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
+map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
+map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
 
 -- tabs
 map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
